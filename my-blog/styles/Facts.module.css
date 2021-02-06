@@ -1,0 +1,48 @@
+/* 
+
+home - random facts area
+
+*/
+
+.container{
+    align-self: normal;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container>h2{
+    font-size: 18px;
+    font-weight: 300;
+    padding-left: 2rem;
+    margin-top: 50px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+.singlerCardContainer{
+    flex: 1;
+}
+
+@media only screen and (min-width: 768px){
+    .content{
+        flex-flow: row wrap;
+        flex-direction: row;
+    }
+    .singlerCardContainer{
+        flex-basis: 50%;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .content{
+        flex-direction: row;
+    }
+    .singlerCardContainer{
+        flex-basis: 25%;
+    }
+}
+
+
