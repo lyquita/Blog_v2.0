@@ -13,23 +13,41 @@ home - random facts area
 .container>h2{
     font-size: 18px;
     font-weight: 300;
-    padding-left: 2rem;
+
     margin-top: 50px;
 }
 
 .content{
     display: flex;
     flex-direction: column;
+    margin-left: -2rem;
+    justify-content: center;
+    
 }
 
 .singlerCardContainer{
     flex: 1;
+    font-size: 1rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 800;
+    text-decoration: underline;
+    line-height: 1.5;
+    letter-spacing: 0.08rem;
+    text-align: center;
 }
+
+.cardWidth{
+    margin-bottom: 20px;
+    background: springgreen;
+}
+
 
 @media only screen and (min-width: 768px){
     .content{
         flex-flow: row wrap;
         flex-direction: row;
+        justify-content: space-around;
+
     }
     .singlerCardContainer{
         flex-basis: 50%;
@@ -38,11 +56,46 @@ home - random facts area
 
 @media only screen and (min-width: 1024px){
     .content{
-        flex-direction: row;
+        flex-direction: row wrap;
+        justify-content: space-around;
+
     }
     .singlerCardContainer{
         flex-basis: 25%;
     }
+    .cardWidth{
+        width: 45%;
+        margin-bottom: 20px;
+    }
 }
 
 
+
+
+/* 
+     SingleFactCard Area
+*/
+
+.root{
+    min-width: 275;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+.bullet{
+    display: inline-block;
+    margin: 0 2px;
+    transform: scale(0.8)
+  }
+
+.title{
+    font-size: 14px;
+  }
+
+.pos{
+    margin-bottom: 12px;
+}
+
+.label{
+    font-size: 0.5rem !important
+}
