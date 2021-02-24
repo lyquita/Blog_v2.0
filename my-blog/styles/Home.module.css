@@ -122,7 +122,28 @@
   margin-top: 100px;
   font-weight: 600;
 }
+.whoAmI h2{
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 50px;
+}
+.whoAmI a:hover{
+  cursor: pointer;
+  color: #0070f3;
+}
+.whatIThink a:hover{
+  cursor: pointer;
+  color: #0070f3;
+}
 
+.Writing{
+  width: -webkit-fill-available;
+}
+
+.Writing a:hover{
+  cursor: pointer;
+  color: #0070f3;
+}
 
 
 

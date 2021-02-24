@@ -5,11 +5,11 @@ import { Button, Box } from "grommet";
 import { More } from "grommet-icons";
 
 import SingleFactsCard from "./SingleFactsCard";
+import Link from "next/link";
 
 export default function RandomFacts() {
   return (
     <div className={styles.container}>
-      <h2>Random facts of me</h2>
       <div className={styles.content}>
         <SingleFactsCard />
         <SingleFactsCard />
@@ -24,7 +24,9 @@ export default function RandomFacts() {
         justify="center"
         direction="row"
       >
+        <Link href="/randomFacts">
         <Button icon={<More />} hoverIndicator />
+        </Link>
       </Box>
     </div>
   );
