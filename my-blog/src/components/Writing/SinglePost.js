@@ -12,14 +12,15 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SinglePost(props) {
-  console.log("single post", props)
+  console.log("single post", props.post)
+  const post = props.post
   const classes = useStyles();
   return (
     <div>
     <Card className={classes.card}>
       <CardHeader
-        title="Real think throughout it."
-        subheader="2021-02-01"
+        title={post.Title}
+        subheader={post.Publish}
       />
     </Card>
     </div>

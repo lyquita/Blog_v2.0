@@ -7,14 +7,14 @@ export default function Writing(props) {
     // limited posts show in the index page
     const limitedPosts = props.posts.filter((post)=>post.id<6)
 
-
+    console.log('limited post', limitedPosts)
     return (
         <div >
-            <SinglePost />
-            <SinglePost />
-            <SinglePost />
-            <SinglePost />
-            <SinglePost />
+        {
+            limitedPosts.map((post,index)=>{
+                return <SinglePost post={post} key={index}/>
+            })
+        }
         </div>
     )
 }
