@@ -6,11 +6,22 @@ import MoodIndicator from "../src/components/MoodIndicator";
 import RandomFacts from "../src/components/RandomFacts/RandomFacts";
 import WhatIAmThinking from "../src/components/WhatIAmThinking/WhatIAmThinking";
 import Writing from "../src/components/Writing/Writing";
+import { css } from "@emotion/react";
 
-export default function Home({posts}) {
-  console.log('propos', posts)
+export default function Home({ posts }) {
+  console.log("propos", posts);
   return (
-    <div className={styles.container}>
+    <div
+      css={css`
+        min-height: 100vh;
+        padding: 0 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+      `}
+    >
       <Navigation />
       <div>
         <h1>Hi</h1>
@@ -44,17 +55,17 @@ export default function Home({posts}) {
             <h1>Writing</h1>
           </a>
         </Link>
-        <Writing posts={posts}/>
+        <Writing posts={posts} />
       </div>
     </div>
   );
 }
 
-export async function getStaticProps(){
+export async function getStaticProps() {
   // get posts from our api
   const res = await fetch("http://localhost:1337/posts");
   const posts = await res.json();
-  return{
-    props: { posts }
+  return {
+    props: { posts },
   };
 }
