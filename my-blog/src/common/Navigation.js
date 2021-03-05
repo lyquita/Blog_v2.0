@@ -7,17 +7,8 @@ import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Slide from "@material-ui/core/Slide";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import { makeStyles } from '@material-ui/core/styles';
-
-
-const useStyles = makeStyles((theme) => ({
-    root:{
-      fontSize:16
-    },
-    list:{
-      display:'flex',
-    }
-}));
+import Link from "next/link";
+import { css } from "@emotion/react";
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -43,17 +34,34 @@ HideOnScroll.propTypes = {
 };
 
 export default function Navigation(props) {
-  const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div
+      css={css`
+        font-size: 24px;
+      `}
+    >
       <React.Fragment>
         <CssBaseline />
         <HideOnScroll {...props}>
           <AppBar>
             <Toolbar>
-              <List className={classes.list}>
-                <ListItem>Home</ListItem>
-                <ListItem>Post</ListItem>
+              <List
+                css={css`
+                  display: flex;
+                `}
+              >
+                <ListItem>
+                  <Link href={`/`}>
+                    <a>Home</a>
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link href={`/post/allPost`}>
+                    <a>
+                      Posts
+                    </a>
+                  </Link>
+                  </ListItem>
               </List>
             </Toolbar>
           </AppBar>
