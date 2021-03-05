@@ -1,8 +1,10 @@
 import Link from "next/link";
+import Navigation from "../../src/common/Navigation";
 
 export default function Post({ post }) {
   return (
     <div>
+      <Navigation />
       <Link href="/">
         <a>Go Home</a>
       </Link>
@@ -15,7 +17,7 @@ export default function Post({ post }) {
 export async function getStaticPaths() {
   const res = await fetch("http://localhost:1337/posts");
   const posts = await res.json();
-  console.log('getStaticPathsPosts', posts)
+  console.log("getStaticPathsPosts", posts);
   const paths = posts.map((post) => ({
     params: { slug: post.Slug },
   }));

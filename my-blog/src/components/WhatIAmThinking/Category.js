@@ -1,19 +1,10 @@
 import React from "react";
 import Chip from "@material-ui/core/Chip";
 import Avatar from "@material-ui/core/Avatar";
-import { makeStyles } from "@material-ui/core/styles";
+import { css } from "@emotion/react"
 
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    padding: "6px 16px",
-  },
-  secondaryTail: {
-    backgroundColor: theme.palette.secondary.main,
-  },
-}));
 
 export default function Category() {
-  const classes = useStyles();
   return (
 
       <div>

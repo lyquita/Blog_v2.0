@@ -1,16 +1,8 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
+import { css } from "@emotion/react"
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    width: 300,
-  },
-  margin: {
-    height: theme.spacing(3),
-  },
-}));
 
 const marks = [
   {
@@ -44,10 +36,11 @@ function valuetext(value) {
 }
 
 export default function MoodIndicator() {
-  const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div css={css`
+      width:300px;
+    `}>
       <Typography id="discrete-slider-custom" gutterBottom style={{fontSize:18}}>
         Mood Indicator
       </Typography>

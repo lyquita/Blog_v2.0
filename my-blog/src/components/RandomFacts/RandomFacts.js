@@ -1,9 +1,7 @@
 import React from "react";
 import styles from "../../../styles/Facts.module.css";
 
-import { Button, Box } from "grommet";
-import { More } from "grommet-icons";
-
+import Button from "@material-ui/core/Button";
 import SingleFactsCard from "./SingleFactsCard";
 import Link from "next/link";
 
@@ -16,18 +14,10 @@ export default function RandomFacts() {
         <SingleFactsCard />
         <SingleFactsCard />
       </div>
-      <Box
-        fill="vertical"
-        overflow="auto"
-        align="center"
-        flex="grow"
-        justify="center"
-        direction="row"
-      >
+    
         <Link href="/randomFacts">
-        <Button icon={<More />} hoverIndicator />
+        <Button>More </Button>
         </Link>
-      </Box>
-    </div>
+        </div>
   );
 }
