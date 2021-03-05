@@ -1,14 +1,20 @@
-import React from 'react'
-import SinglePost from "../../src/components/Writing/SinglePost"
+import React from 'react';
+import SinglePost from "../../src/components/Writing/SinglePost";
+import Link from "next/link";
 
 export default function allPost({posts}) {
     const allPosts = posts;
-    console.log('all', posts);
     return (
         <div>
             {
-                allPosts.map((post, index)=>{
-                    return <SinglePost post={post} key={index}/>
+                allPosts.map((post)=>{
+                    return(
+                        <Link href={`/post/${post.Slug}`}>
+                            <a>
+                            <SinglePost post={post}/>
+                            </a>
+                        </Link>
+                    ) 
                 })
             }
         </div>
