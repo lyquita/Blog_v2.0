@@ -2,8 +2,7 @@
   "kind": "collectionType",
   "collectionName": "posts",
   "info": {
-    "name": "Posts",
-    "description": ""
+    "name": "Posts"
   },
   "options": {
     "increments": true,
@@ -11,17 +10,14 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "title": {
+    "Title": {
       "type": "string"
     },
-    "content": {
+    "Content": {
       "type": "text"
     },
-    "publish": {
+    "Publish": {
       "type": "datetime"
-    },
-    "slug": {
-      "type": "string"
     }
   }
 }
