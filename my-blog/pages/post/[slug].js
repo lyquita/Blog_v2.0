@@ -1,10 +1,8 @@
 import Link from "next/link";
-import Navigation from "../../src/common/Navigation";
 
 export default function Post({ post }) {
   return (
     <div>
-      <Navigation />
       <Link href="/">
         <a>Go Home</a>
       </Link>

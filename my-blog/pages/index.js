@@ -1,7 +1,6 @@
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 
-import Navigation from "../src/common/Navigation";
 import MoodIndicator from "../src/components/MoodIndicator";
 import RandomFacts from "../src/components/RandomFacts/RandomFacts";
 import WhatIAmThinking from "../src/components/WhatIAmThinking/WhatIAmThinking";
@@ -21,7 +20,6 @@ export default function Home({ posts, thinkings }) {
         font-size: 24px;
       `}
     >
-      <Navigation />
       <div>
         <h1>Hi</h1>
         <h1>I'm Hireoo</h1>
@@ -30,10 +28,10 @@ export default function Home({ posts, thinkings }) {
 
       <div className={styles.whatIThink}>
         <div>
-          <h1> ? </h1>
+          <h1 style={{fontSize:20}}> ? </h1>
           <Link href="/thinking">
             <a>
-              <h1>What Am I Thinking About</h1>
+              <h1 style={{fontSize:20}}>What Am I Thinking About</h1>
             </a>
           </Link>
         </div>

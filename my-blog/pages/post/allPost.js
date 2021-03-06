@@ -1,13 +1,12 @@
 import React from 'react';
 import SinglePost from "../../src/components/Writing/SinglePost";
 import Link from "next/link";
-import Navigation from "../../src/common/Navigation";
+
 
 export default function allPost({posts}) {
     const allPosts = posts;
     return (
         <div>
-            <Navigation />
             {
                 allPosts.map((post)=>{
                     return(
