@@ -9,7 +9,7 @@ import styles from "../../../styles/MyThinking.module.css";
 export default function SingleThinking(props) {
   console.log("from top", props);
   const thinking = props.thinking;
-  //image exist
+  //judge the image exist or not 
   if(thinking.image !== null){
     return (
       <div>
