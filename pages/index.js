@@ -28,7 +28,7 @@ export default function Home({ posts, thinkings }) {
 
       <div className={styles.whatIThink}>
         <div>
-          <h1 style={{fontSize:20}}> ? </h1>
+          <h1 style={{fontSize:20,marginTop:100}}> ? </h1>
           <Link href="/thinking">
             <a>
               <h1 style={{fontSize:20}}>What Am I Thinking About</h1>
