@@ -19,13 +19,13 @@ export default function SingleThinking(props) {
             image={`http://localhost:1337${thinking.image.url}`}
             className={styles.image}
           />
-          <CardContent>
+          <CardContent className={styles.content}>
             <Typography>{thinking.content}</Typography>
             <Typography variant="caption">
               {thinking.date}
               <p>#{thinking.category}</p>
             </Typography>
-          </CardContent>
+          </CardContent >
         </Card>
       </div>
     );

@@ -42,7 +42,7 @@ export default function MoodIndicator() {
       width:300px;
     `}>
       <Typography id="discrete-slider-custom" gutterBottom style={{fontSize:18}}>
-        Mood Indicator
+        I feel good now
       </Typography>
       <Slider
         defaultValue={40}

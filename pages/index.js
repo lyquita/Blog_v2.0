@@ -21,7 +21,7 @@ export default function Home({ posts, thinkings }) {
       `}
     >
       <div>
-        <h1>Hi</h1>
+        <h1>There</h1>
         <h1>I'm Hireoo</h1>
         <MoodIndicator />
       </div>

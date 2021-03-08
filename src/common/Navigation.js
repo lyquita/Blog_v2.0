@@ -37,14 +37,19 @@ export default function Navigation(props) {
   return (
     <div
       css={css`
-        font-size: 24px;
+        font-size: 20px;
       `}
     >
       <React.Fragment>
         <CssBaseline />
         <HideOnScroll {...props}>
           <AppBar>
-            <Toolbar>
+            <Toolbar
+              css={css`
+                background-color: #fff;
+                color: #1b1f77;
+              `}
+            >
               <List
                 css={css`
                   display: flex;
@@ -57,11 +62,9 @@ export default function Navigation(props) {
                 </ListItem>
                 <ListItem>
                   <Link href={`/post/allPost`}>
-                    <a>
-                      Posts
-                    </a>
+                    <a>Posts</a>
                   </Link>
-                  </ListItem>
+                </ListItem>
               </List>
             </Toolbar>
           </AppBar>
